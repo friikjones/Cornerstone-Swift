@@ -1,3 +1,5 @@
+import Foundation
+
 func Merge(_ left:[Int],_ right:[Int],_ pivot:Int) -> [Int]{
     print("DEBUG - Merging \(left), \(right) and \(pivot)")
     var aux = [Int]()
