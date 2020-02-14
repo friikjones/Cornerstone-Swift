@@ -1,6 +1,6 @@
 import Foundation
 
-func evaluateHelperWExt(_ expr: String, _ index: inout Int) -> Int {
+func evaluateHelper(_ expr: String, _ index: inout Int) -> Int {
     if Character(expr[index]).isNumber {
         return Int(expr[index])!
     } else {
@@ -19,7 +19,7 @@ func evaluateHelperWExt(_ expr: String, _ index: inout Int) -> Int {
     }
 }
 
-func evaluateWExt(_ expr: String) -> Int {
+func evaluate(_ expr: String) -> Int {
     var i = 0
     return evaluateHelper(expr, &i)
 }
