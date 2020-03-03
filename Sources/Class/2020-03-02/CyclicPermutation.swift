@@ -18,7 +18,7 @@ class Node {
     public var visited: Bool = false
 }
 
-func ClyclicPermutations(){
+func CyclicPermutations(){
     let t = Int(readLine()!)!
     //matrix of Nodes, being [test #][node values]
     var cases = [[Node]]()
