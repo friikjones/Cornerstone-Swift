@@ -67,12 +67,3 @@ func Town() {
     }
 }
 
-func printMatrix<T>(_ inputArray: [[T]]){
-    print("Printing...")
-    for i in 0..<inputArray.count{
-        for j in 0..<inputArray.count{
-            print(inputArray[i][j], terminator:"")
-        }
-        print()
-    }
-}
