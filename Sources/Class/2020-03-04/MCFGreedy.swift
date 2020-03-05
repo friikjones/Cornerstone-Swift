@@ -1,7 +1,6 @@
 import Foundation
 
 class Edge {
-    
     public var cost = -1
     public var node = [Int](repeating: 0, count: 2)
     public var active = false;
