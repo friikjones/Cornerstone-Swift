@@ -11,10 +11,9 @@ func MinimumCostFlow () {
     let input = readLine()!.split(separator: " ").map { Int($0)!}
     let N = input[0] // number of vertexes
     let M = input[1] // number of edges
-    let D = input[2] // cost
+    let _ = input[2] // cost
 
     var edgeArray = [Edge]()
-    var optimalArray = [Bool](repeating: false, count: M)
     
     var vertex = [Int](repeating: 0, count: N)
     var count = 0
@@ -36,30 +35,36 @@ func MinimumCostFlow () {
         }
         count += 1
     }
-    for edge in edgeArray{
-        print("Edge: \(edge.node[0]),\(edge.node[1]), \(edge.cost)")
-    }
 
-    var target = 1
+    var targetArray = [Int]()
+    for edge in edgeArray{
+        targetArray.append(edge.cost)
+    }
+    targetArray.sort()
+    
+    var optimalArray = [Bool](repeating: false, count: M)
+    var iterator = 0
     var activated = 0
-    while activated < N-1 && target < 10{
+    while activated < N-1{
         for i in 0..<M{
-            if edgeArray[i].cost == target{
+            if edgeArray[i].cost == targetArray[iterator] && activated < N-1{
                 if vertex[edgeArray[i].node[0]-1] < 2 || vertex[edgeArray[i].node[1]-1] < 2{
                     optimalArray[i] = true;
                     vertex[edgeArray[i].node[0]-1] += 1
                     vertex[edgeArray[i].node[1]-1] += 1
                     activated += 1
-                    print("Activated \(activated)")
-                    print(optimalArray)
+                    iterator += 1
                 }
             }
         }
-        target += 1
-        print(vertex)
     }
-        // print("Running loop on \(target)")
-        // print("Active so far: \(activated)")
 
+    var changes = 0   
+    for i in 0..<N-1{
+        if optimalArray[i] == false{
+            changes += 1
+        }
+    }
+    print(changes)
 
 }
