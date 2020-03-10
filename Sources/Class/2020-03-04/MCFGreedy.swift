@@ -67,3 +67,23 @@ func MinimumCostFlow () {
     print(changes)
 
 }
+
+func RunMCFTests(){
+    let path = readLine()!
+    
+    _ = readFile(path)
+
+}
+
+func readFile(_ path: String) -> Int {
+    errno = 0
+    if freopen(path, "r", stdin) == nil {
+        perror(path)
+        return 1
+    }
+    while let line = readLine() {
+        print(line)
+        //do something with lines..
+    }
+    return 0
+    }
