@@ -1,4 +1,4 @@
-class Solution{
+class TaskScheduler{
     func leastInterval(_ tasks: [Character], _ n: Int) -> Int {
         var taskPool = tasks
         var i = 0
@@ -11,7 +11,7 @@ class Solution{
             if (i > taskPool.count - 1) {
             if (n + 1 > currentTasks.count) {
                 steps += 1
-                currentTasks.append(“idle”)
+                currentTasks.append("idle")
                 continue
             }else {
                 currentTasks.remove(at: 0)

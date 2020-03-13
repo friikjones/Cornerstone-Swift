@@ -1,4 +1,4 @@
-class Solution{
+class TwoCitySchedule{
     func twoCitySchedCost(_ costs: [[Int]]) -> Int {
         var input = costs
         let n = input.count/2

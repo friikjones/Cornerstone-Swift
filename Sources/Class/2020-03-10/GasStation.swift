@@ -1,4 +1,4 @@
-class Solution {
+class GasStation {
     func canCompleteCircuit(_ gas: [Int], _ cost: [Int]) -> Int {
         let gas2x = gas + gas
         let cost2x = cost + cost

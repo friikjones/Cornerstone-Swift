@@ -1,4 +1,4 @@
-class Solution {
+class PartitionLabel {
     func partitionLabels(_ S: String) -> [Int] {
         var partitions = [Int]()
         let characters = Array(S)
