@@ -1,4 +1,4 @@
-class Solution {
+class CheapestFlights {
     typealias element = (city: Int, stops: Int, runningCost: Int)
 
     func findCheapestPrice(_ n: Int, _ flights: [[Int]], _ src: Int, _ dst: Int, _ K: Int) -> Int {
